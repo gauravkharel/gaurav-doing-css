@@ -1,0 +1,292 @@
+:root {
+  --black: #042940;
+  --primary-color: #DBF227;
+  --secondary-color: #005C53;
+  --primary-gray: #DBF227;
+  --white: #D6D58E;
+  --pri: 'Oxygen', sans-serif;
+  --sec: 'Oxygen Mono', monospace;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--pri);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* background color div */
+.wrapper {
+  background-color: #005C53;
+}
+
+.gradient {
+  background: linear-gradient(90deg, rgba(102, 155, 189, 1) 0%, rgba(253, 45, 45, 1) 100%);
+  height: 2px
+}
+
+
+#intro {
+  padding: 4rem 1rem 10rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#intro .name {
+  font-family: var(--sec);
+}
+
+.name span {
+  font-family: var(--pri);
+  font-size: 4rem;
+  color: var(--secondary-color);
+  display: block;
+}
+
+#intro h2 {
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+/* projects section */
+#projects {
+  padding: 4rem 10rem;
+}
+
+#projects h1 {
+  margin-bottom: 2rem;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+
+#projects h3 {
+  color: var(--pri);
+}
+
+#projects h4 {
+  font-size: 1rem;
+  font-family: var(--sec);
+  margin: 0;
+}
+
+.blackbox {
+  background-color: var(--black);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#projects ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+#projects img {
+  margin: 2rem 0 4rem 0;
+  border-left: 1px solid var(--primary-color);
+  border-top: 1px solid var(--primary-color);
+  border-radius: 25px;
+  padding: 1rem;
+
+}
+
+@media (min-width: 550px) {
+  article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+
+  #projects {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #projects img {
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+
+  .text {
+    grid-column: 5/11;
+    grid-row: 1/2;
+    order: 2;
+    text-align: right;
+  }
+
+  #projects ul {
+    justify-content: flex-end;
+  }
+
+
+}
+
+/* contact form */
+
+#contact-me,
+footer {
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+#contact-me {
+  background-color: var(--secondary-color);
+
+}
+
+#contact-me h2 {
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+
+#contact-me p {
+  font-size: 1.2rem;
+}
+
+#contact-me button {
+  font-style: var(--sec);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background-color: #D6D58E;
+  border: none;
+  color: var(--secondary-color);
+}
+
+#contact-me a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* navbar */
+
+nav {
+  font-family: var(--sec);
+  font-size: 80%;
+  padding: 1rem;
+
+}
+
+nav h1 a {
+  font-family: var(--pri);
+
+}
+
+nav a [class*="fa-"] {
+  font-size: 150%;
+  color: var(--white);
+}
+
+nav h1 [class*="fa-"] {
+  font-size: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row-wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: left;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover,
+nav [class="fa-"]:hover {
+  color: var(--primary-gray);
+}
+
+button {
+  background-color: blueviolet;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: aquamarine;
+  color: #042940;
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
+
+/* footer */
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-flow: row-wrap;
+  gap: 3rem;
+}
+
+footer ul a {
+  font-size: 2rem;
+}
+
+footer ul span {
+  color: cyan;
+}
+
+footer ul span:hover {
+  color: skyblue;
+}
