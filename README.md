@@ -6,7 +6,7 @@
 
 ## Screenshots
 
-![Template Screenshot](Portfolio.jpg)
+![Template Screenshot](Portfolio.png)
 
 
 ## Installation
